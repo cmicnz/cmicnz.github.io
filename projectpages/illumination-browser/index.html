@@ -1,0 +1,257 @@
+<!-- Illumination Browser -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Illumination Browser</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" >
+
+    <style type="text/css">
+        /*font override*/     
+      body {font-family: "Source Sans Pro",Helvetica,Arial,sans-serif; font-weight: 300;} 
+        /*button color and size override*/  
+      body .btn-light { color: #e2e2e2; background-color: #090f15; padding-right: 1.5rem; padding-left: 1.5rem;}
+      body .btn { border-radius: 0.5rem; }
+        /*heading override*/  
+      body .jumbotron { margin-bottom: 1rem; background-color: #ebf0f1;  }
+        /*margins override*/  
+      body .mb-5, .my-5 { margin-bottom: -1rem !important; margin-left: 0.2rem !important; margin-right: 0.2rem !important; }
+    </style>
+  </head>
+
+  <!-- cover -->
+  <body><section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Illumination Browser: An intuitive representation <br>for radiance map databases</h1>
+            <h4 style="color:#5a6268;"><a href="https://www.wgtn.ac.nz/" target="_blank">Computers & Graphics</a></h4>
+            <hr>
+            <h6> 
+                <a href="https://orcid.org/0000-0001-6457-7341" target="_blank">Andrew Chalmers<sup>1</sup></a>, 
+                <a href="https://orcid.org/" target="_blank">Todd Zickler<sup>2</sup></a>,
+                <a href="https://orcid.org/0000-0002-6150-0637" target="_blank">Taehyun Rhee<sup>1</sup></a>
+            <p class="text-justify">  </p>
+            <p><a href="https://www.wgtn.ac.nz/cmic" target="_blank"><sup>1</sup> Computational Media Innovation Centre, Victoria University of Wellington &nbsp;&nbsp;</a> 
+            <p><a href="https://www.wgtn.ac.nz/cmic" target="_blank"><sup>2</sup> School of Engineering and Applied Sciences, Harvard University &nbsp;&nbsp;</a> 
+
+            <p><code>{andrew.chalmers, taehyun.rhee}@vuw.ac.nz</code>
+            <div class="row justify-content-center">
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://www.wgtn.ac.nz/" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Button </a> </p>
+              </div> -->
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://doi.org/10.1016/j.cag.2022.01.006" role="button" target="_blank">
+                    <i class="fa fa-file"></i> PDF </a> </p>
+              </div> -->
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://doi.org/10.1016/j.cag.2022.01.006" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Supplementary Material </a> </p>
+              </div>
+    
+              </div>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/teaser.jpg" width="50%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Radiance maps (RM) are used for capturing the lighting properties of real-world environments. Databases of RMs are useful for various rendering applications such as look development, live action composition, mixed reality, and machine learning. Such databases are not useful if they cannot be organized in a meaningful way. To address this, we introduce the illumination space, a feature space that arranges RM databases based on illumination properties. Our method is motivated by how the RM illuminates the scene as opposed to describing the textural content of the RM. We avoid manual labeling by automatically extracting features from an RM that provides a concise and semantically meaningful representation of its typical lighting effects. We also introduce ‘Illumination Browser’, a user interface (UI) that visualizes the illumination space alongside a real-time preview renderer to enable intuitive browsing for artists. This is made possible with the following contributions: a method to automatically extract a small set of dominant and ambient lighting properties from RMs, a low- dimensional (5D) light feature vector summarizing these properties to form the illumination space, and a UI that effectively utilizes the illumination space. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+<!--   overview -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Overview</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/overview.jpg" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> To develop a low-dimensional representation, we follow an empirical approach of making careful design decisions and observing their effects in large RM databases. Numerous iterations of this design process lead us to five intuitive lighting properties of RMs, split into two categories, dominant and ambient lighting: the (1) size, (2) elevation angle, and (3) azimuth angle of the RM’s most dominant area light sources, as well as the diffuse (4) hue and (5) saturation of the RM. The dominant lighting property set (1, 2, 3) can occur multiple times for a given RM (one set for each bright light in the RM). To create a low-dimensional feature space, these properties are converted into a strictly 5D feature vector. This defines the ‘illumination space’ - a semantically meaningful, low-dimensional feature space. This feature space is embedded in our proposed ‘Illumination Browser’ interface to enable browsing RM databases. 
+          <br><br>
+          Our contributions are summarized as follows:
+          <ul style='text-align:left'><li>We define and extract a small set of dominant and ambient
+          lighting properties from RMs using the DLM.</li>
+          <li>From the extracted lighting properties, we introduce a 5D
+          light feature vector that encodes RMs in a low-dimensional,
+          semantically meaningful feature space — the ‘illumination
+          space’.</li>
+          <li>‘Illumination Browser’ is presented, an interactive visualization
+          for browsing an RM database. Alongside browsing, we
+          also demonstrate searching the RM database by using an RM
+          to obtain other similar RMs.</li></ul></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+
+  
+  <!-- Data/Method -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Methodology</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/methodology.jpg" width="50%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Before introducing the 5D light feature vector, we first define how we obtain dominant lighting properties, which we then use to encode into the dominant light features. A dominant light in an RM is a local region of the lighting sphere Ω ⊂ S2 with the property that the region has a substantial impact on high-frequency lighting effects in a scene, including highlights and cast shadows. An RM may have multiple dominant lights, and we use Ωj to denote the jth dominant light. We assume light Ωj is given through a light detection scheme; we use statistics-based thresholding. The remainder of this section introduces the dominant light model (DLM) for summarizing the lighting effects of each Ωj, and the procedure of fitting a DLM to each Ωj (resulting in a DLM for each dominant light source in an RM).
+          <br>
+          <br>
+          We denote the elevation, azimuth, and size of a given dominant light as θ, φ, and σ respectively. θ and φ are the angular components of z, while σ is the average of σx and σy. An RM may contain multiple dominant lights, thus an RM may contain multiple sets of these properties. To obtain a low dimensional embedding, we describe a way of aggregating these dominant lighting properties into strictly three dominant light features: Fσ , Fθ , and Fc . The first two features describe the size and elevation, whereas the third takes into account the impact of multiple dominant lights, which describe as ‘‘complexity’’ or ‘‘angular spread’’. In addition to these dominant light features, we define the features Fs and Fh that describe the hue and saturation of the RM’s diffuse shading.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Results</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/results-1.jpg" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Feature Fσ which shows the transition from hard to soft shadows. In the RM, this corresponds to the size of the dominant light source, transitioning from small to large. RMs with similar dominant light elevation Fθ are chosen. </p>
+          
+           <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/results-2.jpg" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Feature Fθ which shows the transition from long to short shadows. In the RM, this corresponds to the elevation of the dominant light source, transitioning from low to high. RMs with similar shadow softness Fσ are chosen. </p>
+
+           <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/results-3.jpg" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Feature Fh and Fs are the color features. It is common to find RMs with either red (indoor, sunset), blue (clear sunny sky) or desaturated colors (indoor, overcast). This corresponds to a cool/warm color distribution. We visualize the transition from high saturation blue, desaturated, and high saturation red in one dimension (left to right). </p>
+
+           <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/results-4.jpg" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Feature Fc which shows the transition from low to high azimuthal spread. The center row shows how it corresponds to the number of detected dominant lights (red dots have been added to the center of each detected dominant light source). The rendered images have been normalized to show the details. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Results</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/applications.jpg" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify">We had nine artists use ‘Illumination Browser’ to search for RMs. They were told to first familiarize themselves with its features. Following this, they were tasked to illuminate a synthetic object (which is composited into a photograph) with an RM obtained from the database (no time limit was given, but on average users took approximately 2 min per task). The artists did this for nine different photographs, covering a wide range of illumination conditions (see the supplementary materials). After this, the artists were asked to qualitatively evaluate each feature individually on how well it met their expectations on a 5-point Likert item (from −2, to 2). We found that the features visualized directly on the scatter plots (elevation, size, hue, and saturation) were very intuitive with a median score of 2 with little deviation. Users commented that the azimuthal spread was useful but not as intuitive due to few samples being returned during the browsing and difficulty seeing the clustering in the third dimension (median score of 1).</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <!-- Video -->
+  
+  <br>
+
+    <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Presentation Video</h3>
+            <hr style="margin-top:0px">
+            <div class="figure" style="margin-top: 60px; margin-bottom: 60px;">
+                <video width="70%" controls>
+                    <source src="https://ars.els-cdn.com/content/image/1-s2.0-S0097849322000061-mmc2.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+                <code>
+                @article{Chalmers2022,
+                  title = {Illumination Browser: An intuitive representation for radiance map databases},
+                  author = {Andrew Chalmers and Todd Zickler and Taehyun Rhee},
+                  journal = {Computers & Graphics},
+                  volume = {103},
+                  pages = {101-108},
+                  year = {2022}}
+              </code>
+            </pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+  <section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgement</h3>
+          <hr style="margin-top:0px">
+              <p class="text-justify"> This work was supported by the Smart Ideas Endeavour Fund, New Zealand from MBIE; and in part by the Entrepreneurial University Programme, New Zealand from TEC.
+              </p>
+         
+      </div>
+    </div>
+  </div>
+  <section>
+
+
+
+
+</section></section></section></section></body></html>

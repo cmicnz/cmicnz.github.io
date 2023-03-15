@@ -1,0 +1,182 @@
+<!-- Casual 6DoF -->
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casual 6 DoF</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" >
+
+    <style type="text/css">
+        /*font override*/     
+      body {font-family: "Source Sans Pro",Helvetica,Arial,sans-serif; font-weight: 300;} 
+        /*button color and size override*/  
+      body .btn-light { color: #e2e2e2; background-color: #090f15; padding-right: 1.5rem; padding-left: 1.5rem;}
+      body .btn { border-radius: 0.5rem; }
+        /*heading override*/  
+      body .jumbotron { margin-bottom: 1rem; background-color: #ebf0f1;  }
+        /*margins override*/  
+      body .mb-5, .my-5 { margin-bottom: -1rem !important; margin-left: 0.2rem !important; margin-right: 0.2rem !important; }
+    </style>
+  </head>
+
+  <!-- cover -->
+  <body><section>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Casual 6-DoF: free-viewpoint panorama <br>using a handheld 360° camera</h1>
+            <h4 style="color:#5a6268;"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945" target="_blank"> IEEE Transactions on Visualization and Computer Graphics (TVCG) 2022</a></h4>
+            <hr>
+            <h6> 
+                <a href="https://orcid.org/0000-0002-2358-3638" target="_blank">Rongsen Chen</a>, 
+                <a href="https://orcid.org/0000-0002-8728-8726" target="_blank">Fanglue Zhang</a>,
+                <a href="https://orcid.org/0000-0002-2903-8892" target="_blank">Simon Finnie</a>,
+                <a href="https://orcid.org/0000-0001-6457-7341" target="_blank">Andrew Chalmers</a>,
+                <a href="https://orcid.org/0000-0002-6150-0637" target="_blank">Taehyun Rhee</a>
+            <p class="text-justify">  </p>
+            <p><a href="https://www.wgtn.ac.nz/cmic" target="_blank">Computational Media Innovation Centre, Victoria University of Wellington &nbsp;&nbsp;</a> 
+            <p><code>{rongsen.chen, fanglue.zhang, simon.finnie, andrew.chalmers, taehyun.rhee}@vuw.ac.nz</code>
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2203.16756" role="button" target="_blank">
+                    <i class="fa fa-file-pdf-o"></i> arXiv </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://www.youtube.com/watch?v=kvZTCqgg8Fs" role="button" target="_blank">
+                    <i class="fa fa-youtube"></i> YouTube </a> </p>
+              </div>
+    
+              </div>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/Teaser.png" width="75%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Six degrees-of-freedom (6-DoF) video provides telepresence by enabling users to move around in the captured scene with a wide field of regard. Compared to methods requiring sophisticated camera setups, the image-based rendering method based on photogrammetry can work with images captured with any poses, which is more suitable for casual users. However, existing image-based rendering methods are based on perspective images. When used to reconstruct 6-DoF views, it often requires capturing hundreds of images, making data capture a tedious and time-consuming process. In contrast to traditional perspective images, 360° images capture the entire surrounding view in a single shot, thus, providing a faster capturing process for 6-DoF view reconstruction. This paper presents a novel method to provide 6-DoF experiences over a wide area using an unstructured collection of 360° panoramas captured by a conventional 360° camera. Our method consists of 360° data capturing, novel depth estimation to produce a high-quality spherical depth panorama, and high-fidelity free-viewpoint generation. We compared our method against state-of-the-art methods, using data captured in various environments. Our method shows better visual quality and robustness in the tested scenes. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+<!--   overview -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Overview</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/pipeline.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Our method provides real-time 6-DoF viewing experiences using 360° panoramic images captured by a handheld 360 ° camera. Given an unstructured collection of 360° monocular panoramic images, our method starts with an offline process to recover the orientation and position of each input panorama. We then recover the sparse and dense depth panoramas of the scene. We developed an iterative refinement process to refine the estimated depth to better quality. We then use depth-based image rendering to synthesize 360° RGB images using the recovered depth from the input panoramas. Our novel panoramic view synthesis method can synthesize panoramic images from novel viewpoints in 30fps. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+
+  
+  <!-- Data/Method -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Results</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/result.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> We compare our method with related methods: <i>Unstructured Lumigraph Rendering</i> (ULR), <i>Inside-Out</i> and <i>DeepBlending</i>. We monstrate our method produce more clear and complete result, in those outdoor capture 360 panoramic images. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <!-- Video -->
+  
+  <br>
+
+    <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Presentation Video</h3>
+            <hr style="margin-top:0px">
+            <div class="figure" style="margin-top: 60px; margin-bottom: 60px;">
+                <video width="70%" controls>
+                    <source src="images/TV2_TechVideo_v3.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+                <code>
+                @article{chen2022casual,
+                title={Casual 6-DoF: free-viewpoint panorama using a handheld 360 camera},
+                author={Chen, Rongsen and Zhang, Fang-Lue and Finnie, Simon and Chalmers, Andrew and Rhee, Taehyun},
+                journal={IEEE Transactions on Visualization and Computer Graphics},
+                year={2022},
+                publisher={IEEE}}
+              </code>
+            </pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+  <section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgement</h3>
+          <hr style="margin-top:0px">
+              <p class="text-justify"> This project was supported by the Computational Media Innovation Centre, Victoria University of Wellington, and the Entrepreneurial University Programme by the Tertiary Education Commission in New Zealand. 
+              </p>
+         
+      </div>
+    </div>
+  </div>
+  <section>
+
+
+
+
+</section></section></section></section></body></html>

@@ -1,0 +1,226 @@
+<!-- Telefest -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TeleFest</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" >
+
+    <style type="text/css">
+        /*font override*/     
+      body {font-family: "Source Sans Pro",Helvetica,Arial,sans-serif; font-weight: 300;} 
+        /*button color and size override*/  
+      body .btn-light { color: #e2e2e2; background-color: #090f15; padding-right: 1.5rem; padding-left: 1.5rem;}
+      body .btn { border-radius: 0.5rem; }
+        /*heading override*/  
+      body .jumbotron { margin-bottom: 1rem; background-color: #ebf0f1;  }
+        /*margins override*/  
+      body .mb-5, .my-5 { margin-bottom: -1rem !important; margin-left: 0.2rem !important; margin-right: 0.2rem !important; }
+    </style>
+  </head>
+
+  <!-- cover -->
+  <body><section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>TeleFest: Augmented Virtual Teleportation for Live Concerts</h1>
+            <h4 style="color:#5a6268;"><a href="https://imx.acm.org/2022/" target="_blank">ACM Interactive Experiences (IMX) 2022</a></h4>
+            <hr>
+            <h6> 
+                <a href="https://orcid.org/" target="_blank">Jacob Young</a>, 
+                <a href="https://orcid.org/" target="_blank">Stephen Thompson</a>,
+                <a href="https://orcid.org/" target="_blank">Holly Downer</a>,
+                <a href="https://orcid.org/" target="_blank">Benjamin Allen</a>,
+                <a href="https://orcid.org/" target="_blank">Nadia Pantidi</a>,
+                <a href="https://orcid.org/" target="_blank">Lukas Stoecklein</a>,
+                <a href="https://orcid.org/" target="_blank">Taehyun Rhee</a>
+            <p class="text-justify">  </p>
+            <p><a href="https://www.wgtn.ac.nz/cmic" target="_blank">Computational Media Innovation Centre, Victoria University of Wellington &nbsp;&nbsp;</a> 
+            <p><code>{jacob.young, nadia.pantidi, taehyun.rhee}@vuw.ac.nz</code>
+            <p><code>{stephenthomp09, hollydowner61, ben.allen.9k, lukas.stoecklein}@gmail.com</code>
+
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="pdf/TeleFest-Augmented-virtual-teleportation-for-live-concerts.pdf" role="button" target="_blank">
+                    <i class="fa fa-file"></i> PDF </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://cmicvuw.gitlab.io/public/xr-k-festival/" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Kfestival </a> </p>
+              </div>
+    
+              </div>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/teaser.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> We present TeleFest, a novel system for live-streaming mixed reality 360° videos to online streaming services. TeleFest allows a producer to control multiple cameras in real time, providing viewers with different locations for experiencing the concert and an intermediate software stack allows virtual content to be overlaid with coherent illumination that matches the real-world footage.  </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+<!--   overview -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Overview</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/interfaces.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> TeleFest allows real-world concerts to be viewed immersively through a mixed reality 360° live stream controlled in real time by a producer. The system is designed to take multiple 360° video streams from cameras placed around the stage and crowd and presents them to this producer, who can freely choose which stream is being showed to the remote audience. The producer can also control and place virtual 3D content around the captured space in real time, allowing them to add effects such as weather, pyrotechnics, creatures, and other augmentations to enhance and react to the mood of the performance. These augmentations are realistically lit based on real-world lighting conditions detected from the incoming video streams, seamlessly blending them into their surroundings and making them appear as a real part of the performance.
+           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+
+  
+  <!-- Data/Method -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Live Deployment</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/manual-alignment.png" width="80%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> TeleFest was implemented using the Unity game engine. We built two main interfaces to handle the cameras and asset management; both are broken into multiple windows so that we can take advantage of Unity’s window tab system and rearrange the interface as desired. FFmpeg2 is used for all video and audio related tasks, and is used to decode the incoming video streams from the 360° cameras. Real-world lighting conditions are then detected from this video and used to coherently illuminate any introduced virtual content using the MR360 Unity plugin. The virtual content is then baked into the currently selected camera stream and rendered as an equirectangular texture, which is then re-encoded using FFMPEG and streamed to YouTube.
+          The manual calibration process for aligning the positions of virtual augmentations between multiple cam- eras. 3D points are found in relation to the camera’s real-world positions; in this case we use the corners of the stage and the large display behind the performers. These points after being matched to the equirectangular image. This is done independently for each camera.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Virtual Augmentation</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/virtual-augmentation.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Virtual fireworks are let off to add emphasis to certain parts of the music. Virtual wildlife is introduced to add a serene feeling to the music. Their red hue illustrates how the virtual lighting is based on real-world conditions, in this case a heavy use of red stage lights. </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Applications</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/application.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> The TeleFest live stream lasted approximately three hours, consisted of several live musical performances of varying genres. TeleFest was evaluated by 1,908 online viewers, allowing them to watch the performance from the crowd, the stage, or via a catered experience controlled by a producer in real time that included camera switching and augmented content. The results of an online survey completed by virtual and physical attendees of the festival are presented, showing positive feedback for our setup and suggesting that the addition of virtual and immersive content to live events could lead to a more enjoyable experience for viewers.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <!-- Video -->
+  
+  <br>
+
+    <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Presentation Video</h3>
+            <hr style="margin-top:0px">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6QQLRZInT6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+                <code>
+                @InProceedings
+                {young2022telefest,
+                  title = {TeleFest: Augmented Virtual Teleportation for Live Concerts},
+                  author = {Young, Jacob and Thompson, Stephen and Downer, Holly and Allen, Benjamin and Pantidi, Nadia and Stoecklein, Lukas and Rhee, Taehyun},
+                  publisher = {Association for Computing Machinery},
+                  booktitle = {ACM International Conference on Interactive Media Experiences},
+                  year = {2022}
+                }
+              </code>
+            </pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+  <section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgement</h3>
+          <hr style="margin-top:0px">
+              <p class="text-justify"> This project was supported by Victoria University of Wellington, K-Festival, and the Entrepreneurial University Programme by the Tertiary Education Commission in New Zealand. 
+              </p>
+         
+      </div>
+    </div>
+  </div>
+  <section>
+
+
+
+
+</section></section></section></section></body></html>

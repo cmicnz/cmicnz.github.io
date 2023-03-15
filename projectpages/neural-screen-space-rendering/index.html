@@ -1,0 +1,200 @@
+<!-- Neural Screen Space Rendering -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neural Screen Space Rendering</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" >
+
+    <style type="text/css">
+        /*font override*/     
+      body {font-family: "Source Sans Pro",Helvetica,Arial,sans-serif; font-weight: 300;} 
+        /*button color and size override*/  
+      body .btn-light { color: #e2e2e2; background-color: #090f15; padding-right: 1.5rem; padding-left: 1.5rem;}
+      body .btn { border-radius: 0.5rem; }
+        /*heading override*/  
+      body .jumbotron { margin-bottom: 1rem; background-color: #ebf0f1;  }
+        /*margins override*/  
+      body .mb-5, .my-5 { margin-bottom: -1rem !important; margin-left: 0.2rem !important; margin-right: 0.2rem !important; }
+    </style>
+  </head>
+
+  <!-- Cover -->
+  <body><section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1> Neural Screen Space Rendering of Direct Illumination</h1>
+            <h4 style="color:#5a6268;"><a href="https://www.pg2021.org" target="_blank">Pacific Graphics (PG) 20+21</a></h4>
+            <h6>Best Conference Paper Award</h6>
+            <hr>
+            <h6><a href="https://orcid.org/0000-0003-0753-9976" target="_blank">Christian Suppan<sup>1</sup></a>, 
+                <a href="https://orcid.org/0000-0001-6457-7341" target="_blank">Andrew Chalmers<sup>1</sup></a>, 
+                <a href="https://orcid.org/0000-0001-7031-3828" target="_blank">Junhong Zhao<sup>1</sup></a>,
+                <a href="https://orcid.org/0000-0003-4615-9220" target="_blank">Alex Doronin<sup>2</sup></a>,
+                <a href="https://orcid.org/0000-0002-6150-0637" target="_blank">Taehyun Rhee<sup>1,2</sup></a>
+            <p class="text-justify">  </p>
+            <p><a href="https://www.wgtn.ac.nz/cmic" target="_blank"><sup>1</sup> Computational Media Innovation Centre, Victoria University of Wellington &nbsp;&nbsp;</a> 
+            <p><a href="https://www.wgtn.ac.nz/engineering/school-of-engineering-and-computer-science" target="_blank"><sup>2</sup> School of Engineering and Computer Science, Victoria University of Wellington &nbsp;&nbsp;</a> 
+            <p><code>{christian.suppan, andrew.chalmers, j.zhao, alex.doronin, taehyun.rhee}@vuw.ac.nz</code>
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="pdfs/Neural_Screen_Space_Rendering_of_Direct_Illumination_Final.pdf" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Preprint</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://diglib.eg.org/xmlui/bitstream/handle/10.2312/pg20211385/037-042.pdf?sequence=1" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div>    
+            </div>
+          </h6></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
+              <img src="images/splash_SH.png" width="75%" class="img-fluid" alt="Neural Renderer dataflow">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Neural rendering is a class of methods that use deep learning to produce novel images of scenes from more limited information than traditional rendering methods. This is useful for information scarce applications like mixed reality or semantic photosynthesis but comes at the cost of control over the final appearance. We introduce the Neural Direct-illumination Renderer (NDR), a neural screen space renderer capable of rendering direct-illumination images of any geometry, with opaque materials, under distant illuminant. The NDR uses screen space buffers describing material, geometry, and illumination as inputs to provide direct control over the output. We introduce the use of intrinsic image decomposition to allow a Convolutional Neural Network (CNN) to learn a mapping from a large number of pixel buffers to rendered images. The NDR predicts shading maps, which are subsequently combined with albedo maps to create a rendered image. We show that the NDR produces plausible images that can be edited by modifying the input maps and marginally outperforms the state of the art while also providing more functionality. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+<!-- Overview -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Overview</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
+              <img src="images/ndr_struct_SH.png" width="85%" class="img-fluid" alt="Neural Renderer network structure">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> We train two encoders, two decoders, and a U-Net based CNN to produce diffuse and specular shading maps that are multiplied by their respective albedos and summed to create images following the intrinsic image formation model. Our network takes parameter maps of roughness, normal, and depth, as well as spherical harmonic-encoded illumination and coarse shading maps generated with traditional deferred shading as input. The coarse shading maps are not required to produce plausible shading but increase colour consistency and the accuracy of highlight placement. We train our network by supervising both the shading maps and final image to ensure accurate reproduction of rarely visible rendering effects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+
+  
+  <!-- Dataset -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Dataset</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
+              <img src="images/dataset.png" width="80%" class="img-fluid" alt="Object generation steps for dataset">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> We generate a synthetic dataset of procedurally-generated objects by generating a number of geometric primitives, applying random height maps, applying textures provided by Valentin Deschaintre, and combining these with random positions and rotations. The objects and their parameter maps are rendered using a modified version of PBRT-v3 and the GGX BRDF model. We generate 60,000 training samples. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- Results -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Results</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
+              <img src="images/short_func_SH.png" width="80%" class="img-fluid" alt="Neural renderer functionality, showing correct response to changes in different material parameters">
+            </div>
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
+              <img src="images/short_vase_comp.png" width="60%" class="img-fluid" alt="Neural renderer state of the art comparison">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> 
+            We demonstrate our method's ability to produce plausible renders from single viewpoint information featuring shading, shadows, specular highlights, and Fresnel effects. Our method accurately handles changes in all input parameters. We compare our method with the recent specialist state-of-the art method <i>Real Shading</i>, as well as the foundational general purpose image-to-image translation network <i>pix2pix</i> and two traditional rendering approaches. Our method produces more accurate and noise-resilient renders than other methods while also offering a greater range of functionality than <i>Real Shading</i> by incorporating specular shading and variable illumination. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- Video -->
+  
+  <br>
+
+    <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Presentation Video</h3>
+            <hr style="margin-top:0px">
+            <div class="figure" style="margin-top: 60px; margin-bottom: 20px;">
+                <video width="70%" controls>
+                    <source src="images/video_pg2021.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em"><code>
+                @article{suppan2021neural,
+                title={Neural Screen Space Rendering of Direct Illumination},
+                author={Suppan, Christian and Chalmers, Andrew and Zhao, Junhong and Doronin, Alex and Rhee, Taehyun},
+                publisher={The Eurographics Association},
+                year={2021}}</code></pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+  <section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgement</h3>
+          <hr style="margin-top:0px">
+              <p class="text-justify"> This project was funded by the Smart Ideas Endeavour Fund from MBIE and in part by the Entrepreneurial University Programme from TEC in New Zealand.
+ </p>
+         
+      </div>
+    </div>
+  </div>
+  <section>
+
+
+
+
+</section></section></section></section></body></html>

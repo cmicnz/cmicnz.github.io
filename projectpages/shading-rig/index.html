@@ -1,0 +1,226 @@
+<!-- Shading Rig -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shading Rig</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" >
+
+    <style type="text/css">
+        /*font override*/     
+      body {font-family: "Source Sans Pro",Helvetica,Arial,sans-serif; font-weight: 300;} 
+        /*button color and size override*/  
+      body .btn-light { color: #e2e2e2; background-color: #090f15; padding-right: 1.5rem; padding-left: 1.5rem;}
+      body .btn { border-radius: 0.5rem; }
+        /*heading override*/  
+      body .jumbotron { margin-bottom: 1rem; background-color: #ebf0f1;  }
+        /*margins override*/  
+      body .mb-5, .my-5 { margin-bottom: -1rem !important; margin-left: 0.2rem !important; margin-right: 0.2rem !important; }
+    </style>
+  </head>
+
+  <!-- cover -->
+  <body><section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Shading Rig: Dynamic Art-directable Stylised <br>Shading for 3D Characters</h1>
+            <h4 style="color:#5a6268;"><a href="https://s2021.siggraph.org/" target="_blank">SIGGRAPH Real-Time Live! (RTL) 2021</a></h4>
+            <h4 style="color:#5a6268;"><a href="https://dl.acm.org/toc/tog/2021/40/5" target="_blank">ACM Transactions on Graphics (ToG) 2021</a></h4>
+            <hr>
+            <h6> 
+                <a href="https://orcid.org/" target="_blank">Lohit Petikam<sup>1</sup></a>, 
+                <a href="https://orcid.org/" target="_blank">Ken Anjyo<sup>1,2</sup></a>,
+                <a href="https://orcid.org/" target="_blank">Taehyun Rhee<sup>1</sup></a>
+            <p class="text-justify">  </p>
+            <p><a href="https://www.wgtn.ac.nz/cmic" target="_blank"><sup>1</sup> Computational Media Innovation Centre, Victoria University of Wellington</a> 
+            <p><a href="https://olm.co.jp/?lang=en" target="_blank"><sup>2</sup> OLM Digital, Japan</a> 
+            <p><code>{lohit.petikam}@gmail.com</code>
+            <p><code>{taehyun.rhee, ken.anjyo}@vuw.ac.nz</code>
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://lohit.dev/ShadingRig/" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Project Page </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://dl.acm.org/doi/10.1145/3461696" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Publication </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://lohit.dev/assets/papers/ShadingRig_TOG_Supplemental.pdf" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Supplementary </a> </p>
+              </div>
+    
+              </div>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/teaser2.png" width="75%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Despite the popularity of 3D animation techniques, the style of 2D cel animation is seeing increased use in games and interactive applications. However, conventional 3D toon shading frequently requires manual editing to clean up undesired shadows or add stylistic details based on art direction. This editing is impractical for the frame-by-frame editing in cartoon feature film post-production. For interactive stylised media and games, post-production is unavailable due to real-time constraints, so art-direction must be preserved automatically. For these reasons, artists often resort to mesh and texture edits to mitigate undesired shadows typical of toon shaders. Such edits allow real-time rendering but are limited in resolution, animation quality, and lack detail control for stylised shadow design. 
+            <br><br>
+          In our framework, artists build a "shading rig", a collection of these edits, that allows artists to animate toon shading. Artists pre-animate the shading rig under changing lighting, to dynamically preserve artistic intent in a live application, without manual intervention. We show our method preserves continuous motion and shape interpolation, with fewer keyframes than previous work. Our shading shape interpolation is computationally cheaper than state-of-the-art image interpolation techniques. We achieve these improvements while preserving vector quality rendering, without resorting either to high texture resolution or mesh density.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+<!--   overview -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Overview</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/overview.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+              <!-- <br><br> -->
+          <p class="text-justify">  </p>
+          <p class="text-justify"> We do ... </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+
+  
+  <!-- Data/Method -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Dataset/Methodology</h3>
+            <hr style="margin-top:0px">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/dataset.png" width="80%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> We do ...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Results</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/results_wild.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> We compare ... </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Applications</h3>
+            <hr style="margin-top:0px">
+          <div class="text-center" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="images/applications.png" width="85%" class="img-fluid" alt="Responsive image">
+            </div>
+          <p class="text-justify">  </p>
+          <p class="text-justify"> Our method ... </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <!-- Video -->
+  
+  <br>
+
+    <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Presentation Video</h3>
+            <hr style="margin-top:0px">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5VK_gGQC6KU?start=1121" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+                <code>
+                @article{10.1145/3461696,
+                  author = {Petikam, Lohit and Anjyo, Ken and Rhee, Taehyun},
+                  title = {Shading Rig: Dynamic Art-Directable Stylised Shading for 3D Characters},
+                  publisher = {Association for Computing Machinery},
+                  journal = {ACM Trans. Graph.},
+                  volume = {40},
+                  number = {5},
+                  issue_date = {October 2021},
+                }
+              </code>
+            </pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+  <section>
+  <br>
+  
+  <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgement</h3>
+          <hr style="margin-top:0px">
+              <p class="text-justify"> We would like to give special thanks to Ayumi Kimura, Anandaroop Mukherjee, Joaquim Jorge, and CMIC researchers and staff. Models and artwork sourced from Sketchfab and Blender Cloud. This project was supported by the Entrepreneur University Programme, funded by Tertiary Education Commission (TEC), New Zealand. 
+              </p>
+         
+      </div>
+    </div>
+  </div>
+  <section>
+
+
+
+
+</section></section></section></section></body></html>
