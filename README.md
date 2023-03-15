@@ -1,2 +1,1 @@
-# cmicnz.github.io
-# editing file
+# cmicvuw.github.io
