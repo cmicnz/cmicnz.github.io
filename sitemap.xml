@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 <url>
 	<loc>https://cmicvuw.github.io/</loc>
 	<lastmod>2023-03-16T23:56:13+01:00</lastmod>
@@ -7,41 +9,31 @@
 <url>
 	<loc>https://cmicvuw.github.io/projectpages/deep-portrait-delighting</loc>
 	<lastmod>2023-03-16T23:56:13+01:00</lastmod>
-	<priority>0.6</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cmicvuw.github.io/projectpages/telefest</loc>
 	<lastmod>2023-03-16T23:56:13+01:00</lastmod>
-	<priority>0.6</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cmicvuw.github.io/projectpages/casual-6-dof</loc>
 	<lastmod>2023-03-16T23:56:13+01:00</lastmod>
-	<priority>0.6</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cmicvuw.github.io/projectpages/illumination-browser</loc>
 	<lastmod>2023-03-16T23:56:13+01:00</lastmod>
-	<priority>0.6</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cmicvuw.github.io/projectpages/neural-screen-space-rendering</loc>
 	<lastmod>2023-03-16T23:56:13+01:00</lastmod>
-	<priority>0.6</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cmicvuw.github.io/projectpages/under-construction</loc>
 	<lastmod>2023-03-16T23:56:13+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://cmicvuw.github.io/projectpages/under-construction/</loc>
-	<lastmod>2023-03-16T23:56:22+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://cmicvuw.github.io/projectpages/telefest/</loc>
-	<lastmod>2023-03-16T23:56:45+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 
