@@ -14,9 +14,8 @@
 As of Nov 2022...
 - We are cloning and editing copies of _Deep Portrait Delighting_ folder.
 - Whichever project you clone and edit, make sure that the proper css files are linked in your [index.html] file; it'll help with keeping formatting similar
-    - https://cmicvuw.github.io/projectpages/main/css/bootstrap-4.4.1.css
+    - https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css
     - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-
 
 # How to link your new project page to the Main page
 - Edit the index.html of the Main page by copying one of the sections and editing the link, picture, and name.
