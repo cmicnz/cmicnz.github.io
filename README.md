@@ -19,3 +19,6 @@ As of Nov 2022...
 
 # How to link your new project page to the Main page
 - Edit the index.html of the Main page by copying one of the sections and editing the link, picture, and name.
+
+# Note
+- .DS Store is a temp file made by the MacOS. You can delete it from any folders.
