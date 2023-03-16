@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>./projectpages/deep-portrait-delighting</loc>
+  </sitemap>
+  <sitemap>
+    <loc>./projectpages/casual-6-dof</loc>
+  </sitemap>
+    <sitemap>
+    <loc>./projectpages/neural-screen-space-rendering</loc>
+  </sitemap>
+</sitemapindex>
