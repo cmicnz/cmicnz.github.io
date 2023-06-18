@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Deep Portrait Delighting</title>
+    <title>Digital Twin - Creatures</title>
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -42,59 +42,18 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1> Deep Portrait Delighting</h1>
+            <h1> Digital Twin - Creatures</h1>
             <h4 style="color:#5a6268;"><a href="https://eccv2022.ecva.net/" target="_blank">European Conference on Computer Vision (ECCV) 2022</a></h4>
             <hr>
-            <h6> <a href="https://orcid.org/0000-0002-4445-7278" target="_blank">Joshua Weir</a>, 
-                <a href="https://orcid.org/0000-0001-7031-3828" target="_blank">Junhong Zhao</a>,
-                <a href="https://orcid.org/0000-0001-6457-7341" target="_blank">Andrew Chalmers</a>, 
-                <a href="https://orcid.org/0000-0002-6150-0637" target="_blank">Taehyun Rhee</a>
+            <h6> <a href="https://orcid.org/0000-0002-4445-7278" target="_blank">Andrew Chalmers</a>, 
             <p class="text-justify">  </p>
             <p><a href="https://www.wgtn.ac.nz/cmic" target="_blank">Computational Media Innovation Centre, Victoria University of Wellington &nbsp;&nbsp;</a> 
-            <p><code>{josh.weir, andrew.chalmers, j.zhao, taehyun.rhee}@vuw.ac.nz</code>
-            <div class="row justify-content-center">
-              <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2203.12088" role="button" target="_blank">
-                    <i class="fa fa-file"></i> arXiv</a> </p>
-              </div>
-              <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136760402.pdf" role="button" target="_blank">
-                    <i class="fa fa-file"></i> Paper</a> </p>
-              </div>
-              <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://static-content.springer.com/esm/chp%3A10.1007%2F978-3-031-19787-1_24/MediaObjects/539948_1_En_24_MOESM1_ESM.zip" role="button" target="_blank">
-                    <i class="fa fa-file"></i> Supp</a> </p>
-              </div>
-    
-            </div>
+            <p><code>{andrew.chalmers, taehyun.rhee}@vuw.ac.nz</code>
           </h6></div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- abstract -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h3>Abstract</h3>
-            <hr style="margin-top:0px">
-            <!-- <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                  <source src="images/video-teaser_c.mp4" type="video/mp4">
-            </video> -->
-            <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
-              <img src="images/teaser2.png" width="75%" class="img-fluid" alt="Responsive image">
-            </div>
-              <!-- <br><br> -->
-          <p class="text-justify">  </p>
-          <p class="text-justify"> We present a deep neural network for removing undesirable shading features from an unconstrained portrait image, recovering the underlying texture. Our training scheme incorporates three regularization strategies: masked loss, to emphasize high-frequency shading features; soft-shadow loss, which improves sensitivity to subtle changes in lighting; and shading-offset estimation, to supervise separation of shading and texture. Our method demonstrates improved delighting quality and generalization when compared with the state-of-the-art. We further demonstrate how our delighting method can enhance the performance of light-sensitive computer vision tasks such as face relighting and semantic parsing, allowing them to handle extreme lighting conditions. </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
 
 <!--   overview -->
   <section>
@@ -107,11 +66,11 @@
                   <source src="images/video-teaser_c.mp4" type="video/mp4">
             </video> -->
             <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
-              <img src="images/overview.png" width="85%" class="img-fluid" alt="Responsive image">
+              <img src="images/DigitalTwin-Creatures.png" width="85%" class="img-fluid" alt="Responsive image">
             </div>
               <!-- <br><br> -->
           <p class="text-justify">  </p>
-          <p class="text-justify">(1) We train a U-Net based CNN to estimate the ground-truth de-lit image <i>I<small>dlt</small></i> from a given upper-body portrait image   <i>I<small>src</small></i>. (2) A second decoder learns the offset image <i>I<small>off</small></i> = <i>I<small>src</small></i> - <i>I<small>dlt</small></i> during training, allowing the latent space to discriminate between shading and texture. (3) We synthesize soft-shadow variants of each input image in our training set, and apply a small regularization loss to their outputs to improve generalization to subtle changes in lighting. (4) We localize high-frequency shading (i.e. shadow boarders, reflections) in our training images, and emphasize these regions in our loss function to motivate the removal of small but visually significant lighting artifacts.  </p>
+          <p class="text-justify">Modelling algorithms to create a digital twin of creatures (e.g., marine sponge, Pāua shells) for scientific analysis, content generation, immserive visualisation, and digital preservation.</p>
         </div>
       </div>
     </div>
@@ -120,109 +79,23 @@
   
 
   
-  <!-- Disentangled Interpolation and Style Mixing -->
+  <!-- Information -->
   <section>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h3>Dataset</h3>
+          <h3>Information</h3>
             <hr style="margin-top:0px">
             <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
               <img src="images/dataset.png" width="80%" class="img-fluid" alt="Responsive image">
             </div>
           <p class="text-justify">  </p>
-          <p class="text-justify"> We modify a popular face-recognition dataset: CMU Multi-PIE (a), to synthesize source (d), target (c) and all intermediary images (e, f, g) required for our supervised learning pipeline. Our training set consists of 130 subjects each captured under two different poses/clothing (260 unique images). 1,293 lighting conditions (d) were generated for each unique image.</p>
+          <p class="text-justify"> Details coming soon...</p>
         </div>
       </div>
     </div>
   </section>
   <br>
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h3>Results</h3>
-            <hr style="margin-top:0px">
-          <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
-              <img src="images/results_wild.png" width="85%" class="img-fluid" alt="Responsive image">
-            </div>
-          <p class="text-justify">  </p>
-          <p class="text-justify"> We compare our method with recent state-of-the-art methods: <i>Total Relighting</i> (TR), and <i>Single Image Portrait Relighting via Explicit Multiple Reflectance Channel Modelling</i> (EMR). We emphasize our methods consistency regarding the removal of light artifacts, the recovery of texture, and the preservation of non-lighting based content. </p>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h3>Applications</h3>
-            <hr style="margin-top:0px">
-          <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
-              <img src="images/applications.png" width="85%" class="img-fluid" alt="Responsive image">
-            </div>
-          <p class="text-justify">  </p>
-          <p class="text-justify"> Our method serves as an effective data normalization tool for face relighting by removing shading artifacts from the input image, Our method also improves the semantic clarity of face images under harsh illuminations, which greatly improves the results of existing face parsing pipelines. </p>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-  
-  <!-- Free-View Local Facial Editing -->
-  
-  <br>
-
-    <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-            <h3>Presentation Video</h3>
-            <hr style="margin-top:0px">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/b7kxH-mf4_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
-          </div>
-      </div>
-    </div>
-  </section>
-  <br>
-  
-  <section>
-  <div class="container">
-    <div class="row ">
-      <div class="col-12">
-          <h3>Citation</h3>
-          <hr style="margin-top:0px">
-              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em"><code>
-                @InProceedings{weir2022deep, 
-                title="Deep Portrait Delighting",
-                author="Weir, Joshua and Zhao, Junhong and Chalmers, Andrew and Rhee, Taehyun",
-                booktitle="Computer Vision -- ECCV 2022",
-                year="2022"}</code></pre>
-          <hr>
-      </div>
-    </div>
-  </div>
-  <section>
-  <br>
-  
-  <section>
-  <div class="container">
-    <div class="row ">
-      <div class="col-12">
-          <h3>Acknowledgement</h3>
-          <hr style="margin-top:0px">
-              <p class="text-justify"> This work was supported by the Entrepreneurial University Programme from the Tertiary Education Commission, and MBIE Smart Idea Programme by Ministry of Business, Innovation and Employment in New Zealand. We thank all image providers, including Flickr users: “Debarshi Ray”, “5of7” and “photographer695”, whose photographs were cropped, and processed by our neural network. Sources are provided in the supplementary material. 
- </p>
-         
-      </div>
-    </div>
-  </div>
-  <section>
 
 
 
